@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for Perls Default Conentent module.
+ */
+
+use Drupal\consumers\Entity\Consumer;
+
+/**
+ * Implements hook_install().
+ */
+function perls_default_content_install() {
+
+  // Create URL Aliases.
+  \Drupal::service('path.alias_storage')->save("/manage-content/course", "/manage/courses-and-content-library/courses", "und");
+  \Drupal::service('path.alias_storage')->save("/manage-taxonomy/category", "/manage/courses-and-content-library/topics", "und");
+  \Drupal::service('path.alias_storage')->save("/manage-content/learn_article,learn_link,learn_package", "/manage/courses-and-content-library/learning-objects", "und");
+  \Drupal::service('path.alias_storage')->save("/manage-content/tip_card", "/manage/courses-and-content-library/tip-cards", "und");
+  \Drupal::service('path.alias_storage')->save("/manage-content/flash_card", "/manage/courses-and-content-library/flash-cards", "und");
+  \Drupal::service('path.alias_storage')->save("/manage-content/quiz", "/manage/courses-and-content-library/quizzes", "und");
+  \Drupal::service('path.alias_storage')->save("/manage-taxonomy/tags", "/manage/courses-and-content-library/tags", "und");
+
+  // Create RestAPI consumer.
+  $consumer = Consumer::create([
+    'uuid' => 'a65231af-be50-4638-8bab-a5472869dbb2',
+    'owner_id' => '1',
+    'user_id' => '52',
+    'label' => 'RestAPI',
+    'langcode' => 'en',
+    'third_party' => '0',
+    'confidential' => 1,
+    'roles' => ['rest_api_user'],
+    'secret' => 'ld9GzR*2I4BtZ!%eCnD!mxqPPLWIhdRX',
+    'redirect' => 'https://gowithsparklearn.com/auth',
+  ]);
+
+  $consumer->save();
+
+}

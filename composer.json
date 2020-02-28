@@ -1,0 +1,17 @@
+{
+    "name": "perls_default_content",
+    "type": "drupal-module",
+    "description": "PERLS Default Content",
+    "homepage": "https://clientportal.assembla.com/spaces/ADLPERLS/wiki/PERLS_Default_Content",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name" : "Shannon Medlin",
+            "email" : "smedlin@tekAura.com",
+            "homepage" : "https://www.tekAura.com",
+            "role" : "Developer"
+        }    ],
+    "require": {
+        "drupal/default_content": "^1.0"
+    }
+}

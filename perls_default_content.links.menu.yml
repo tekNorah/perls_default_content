@@ -1,0 +1,223 @@
+perls_default_content.manage_library:
+  title: 'Courses and Content Library'
+  description: 'Manage Courses and Content'
+  parent: content-management
+  menu_name: content-management
+  route_name: view.manage_content.page_1
+  route_parameters: { node_type: 'course' }
+  weight: 1
+
+perls_default_content.manage_courses:
+  title: 'Courses'
+  description: 'Manage Courses'
+  parent: perls_default_content.manage_library
+  menu_name: content-management
+  route_name: view.manage_content.page_1
+  route_parameters: { node_type: 'course' }
+  weight: 1
+
+perls_default_content.manage_topics:
+  title: 'Topics'
+  description: 'Manage Topics'
+  parent: perls_default_content.manage_library
+  menu_name: content-management
+  route_name: view.manage_vocabularies.page_1
+  route_parameters: { taxonomy_vocabulary: 'category' }
+  weight: 2
+
+perls_default_content.manage_learning_objects:
+  title: 'Learning Objects'
+  description: 'Manage Learning Objects'
+  parent: perls_default_content.manage_library
+  menu_name: content-management
+  route_name: view.manage_content.page_4
+  route_parameters: { node_type: 'learn_article,learn_link,learn_package' }
+  weight: 3
+
+perls_default_content.manage_tip_cards:
+  title: 'Tip Cards'
+  description: 'Manage Tip Cards'
+  parent: perls_default_content.manage_library
+  menu_name: content-management
+  route_name: view.manage_content.page_1
+  route_parameters: { node_type: 'tip_card' }
+  weight: 4
+
+perls_default_content.manage_flash_cards:
+  title: 'Flash Cards'
+  description: 'Manage Flash Cards'
+  parent: perls_default_content.manage_library
+  menu_name: content-management
+  route_name: view.manage_content.page_1
+  route_parameters: { node_type: 'flash_card' }
+  weight: 5
+
+perls_default_content.manage_quiz:
+  title: 'Quizzes'
+  description: 'Manage Quizzes'
+  parent: perls_default_content.manage_library
+  menu_name: content-management
+  route_name: view.manage_content.page_1
+  route_parameters: { node_type: 'quiz' }
+  weight: 6
+
+perls_default_content.manage_tags:
+  title: 'Tags'
+  description: 'Manage Tags'
+  parent: perls_default_content.manage_library
+  menu_name: content-management
+  route_name: view.manage_vocabularies.page_1
+  route_parameters: { taxonomy_vocabulary: 'tags' }
+  weight: 7
+
+perls_default_content.manage_users_and_groups:
+  title: 'Users and Groups'
+  description: 'Manage Users and Groups'
+  parent: content-management
+  menu_name: content-management
+  route_name: view.manage_users.page
+  weight: 2
+
+perls_default_content.manage_users:
+  title: 'Users'
+  description: 'Manage Users'
+  parent: perls_default_content.manage_users_and_groups
+  menu_name: content-management
+  route_name: view.manage_users.page
+  weight: 0
+
+perls_default_content.manage_groups:
+  title: 'Groups'
+  description: 'Manage Groups'
+  parent: perls_default_content.manage_users_and_groups
+  menu_name: content-management
+  route_name: view.manage_groups.manage_groups
+  weight: 1
+
+perls_default_content.manage_sys_info:
+  title: 'System Information'
+  description: 'Manage System Information'
+  parent: content-management
+  menu_name: content-management
+  route_name: system.status
+  weight: 3
+
+perls_default_content.manage_system_status:
+  title: 'System Status'
+  description: 'View system status report'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: system.status
+  weight: 0
+
+perls_default_content.manage_activity:
+  title: 'Activity'
+  description: 'Manage Activity'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: <none>
+  weight: 1
+
+perls_default_content.manage_sys_config:
+  title: 'System Config'
+  description: 'Manage System Config'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: <none>
+  weight: 2
+
+perls_default_content.manage_target_lrs_endpoints:
+  title: 'LRS endpoints'
+  description: 'Manage target LRS endpoints'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: sparklearn_xapi_content.admin_settings_form
+  weight: 3
+
+perls_default_content.manage_system_name:
+  title: 'System Name'
+  description: 'Edit system name'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: system.site_information_settings
+  weight: 4
+
+perls_default_content.manage_execute_cron:
+  title: 'Execute Cron'
+  description: 'Manually execute cron'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: admin_toolbar.run.cron
+  weight: 5
+
+perls_default_content.manage_clear_system_cache:
+  title: 'Clear System Cache'
+  description: 'Manually clear system cache'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: admin_toolbar_tools.flush
+  weight: 6
+
+perls_default_content.manage_system_offline:
+  title: 'System Maintenance'
+  description: 'Take system offline for maintenance'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: system.site_maintenance_mode
+  weight: 7
+
+perls_default_content.manage_system_log:
+  title: 'System Log'
+  description: 'View system log'
+  parent: perls_default_content.manage_sys_info
+  menu_name: content-management
+  route_name: view.watchdog.page
+  weight: 8
+
+perls_default_content.learner_profile:
+  title: 'Profile'
+  description: 'Profile page of the user'
+  parent: learner-user-menu
+  menu_name: learner-user-menu
+  route_name: user.page
+  weight: 0
+
+perls_default_content.learner_manage_content:
+  title: 'View as learner'
+  description: 'Dashboard for Learners'
+  parent: learner-user-menu
+  menu_name: learner-user-menu
+  route_name: view.dashboard.page_1
+  weight: 1
+
+perls_default_content.learner_log_out:
+  title: 'Log Out'
+  description: 'Menu link to log out'
+  parent: learner-user-menu
+  menu_name: learner-user-menu
+  class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
+  weight: 2
+
+perls_default_content.content_manager_profile:
+  title: 'Profile'
+  description: 'Profile page of the content manager'
+  parent: content-manager-user-menu
+  menu_name: content-manager-user-menu
+  route_name: user.page
+  weight: 0
+
+perls_default_content.content_manager_view_as_learner:
+  title: 'View as learner'
+  description: 'Allow a content manager to see what learners see'
+  parent: content-manager-user-menu
+  menu_name: content-manager-user-menu
+  route_name: view.recommended_content.learner_page
+  weight: 1
+
+perls_default_content.content_manager_log_out:
+  title: 'Log Out '
+  description: 'Menu link to log out'
+  parent: content-manager-user-menu
+  menu_name: content-manager-user-menu
+  class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
+  weight: 2
